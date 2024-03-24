@@ -6,7 +6,7 @@ llm = genai.GenerativeModel(model_name="gemini-pro")
 
 def prompt(text):
     prompt_parts = [
-        f'"Given a text: {text} analyze the text and recommend a book that the user will like reading in their current situation/mood. the output should contain the book name and a line explaining why that book was chosen"'
+        f'"Given a text: {text} analyze the text and recommend books that the user will like reading in their current situation/mood.Provide multiple book recommendations based on different aspects of the input text (e.g., mood, themes, keywords).the output should contain the book recommendation in bold in the first line and a line explaining why that book was chosen"'
     ]
     return prompt_parts
 def generate_book(text):
